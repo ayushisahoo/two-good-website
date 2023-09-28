@@ -1,0 +1,508 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection{
+    color: white;
+    background-color: black;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#nav-part1{
+    height: 83px;
+    overflow: hidden;
+}
+#nav-part1 svg{
+    display: block;
+    
+}
+#nav #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#links{
+    padding: 20px;
+}
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 50px;
+}
+#nav-part2 #icons{
+    background-color: white;
+    color: #333;
+    border-radius: 50px;
+    padding: 10px 10px;
+}
+#nav-part2 #icons i{
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+#cursor{
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: blanchedalmond;
+    transform: scale(0);
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 30vh;
+}
+#page1 h1{
+    font-size: 15vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 14vw;
+    letter-spacing: -8px;
+    padding: 0 20px;
+}
+#video-container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 10px 20px;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-container #play{
+    padding: 3vw 2vw;
+    background-color: black;
+    color: white;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    font-family: futura;
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 2vw;
+}
+
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2 .elem .dets{
+    height: 50px;
+    width: 80%;
+    position: absolute;
+    z-index: 999;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    background-color: palegoldenrod;
+    border-radius: 50px;
+}
+
+#page3{
+    margin-top: 100px;
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#page3 #content{
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 150px;
+}
+#page3 #content #left{
+    font-family: futura;
+    font-size: 1.7vw;
+    line-height: 60px;
+    width: 50%;
+}
+#page3 #content #right{
+   width: 30%;
+   font-size: 18px;
+}
+#page3 #content #right #para2{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+#page3 #content #right a{
+    /* margin-top:40px ; */
+    text-decoration: none;
+    color: #333;
+}
+#page3 #content #right a:hover{
+    text-decoration: underline;
+}
+#page4{
+    margin-top: 90px;
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#page4 h1{
+    font-family: futura;
+    font-size: 4vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    width: 80%;
+    text-align: center;
+}
+#page4 button{
+    width: 300px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-top: 70px;
+}
+#page4 button:hover{
+    color: #898888;
+}
+#page4 p{
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#page5{
+    min-height: 80%;
+    padding: 3vw 2vw;
+}
+#page5 #personal{
+    width: 100% ;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content:  space-around;
+}
+#page5 #personal .pers{
+   
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+#page5 #personal .pers img{
+    object-fit: contain;
+}
+#page5 #personal .pers h2{
+    font-family: futura ;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#page5 #personal .pers p{
+    font-size: 18px;
+    margin-bottom:30px;
+}
+#page5 #personal .pers h2 p{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    align-items: flex-start;
+}
+
+
+.child{
+    height: 55vh;
+    width: 40vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+@media (max-width:600px){
+
+    #nav #nav-part2{
+    display: none;
+}
+#links{
+    padding: 20px;
+}
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 50px;
+}
+#nav-part2 #icons{
+    background-color: white;
+    color: #333;
+    border-radius: 50px;
+    padding: 10px 10px;
+    display: block;
+}
+#nav-part2 #icons i{
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+    #page1 h1{
+        font-size: 13vw;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-family: futura;
+        line-height: 14vw;
+        letter-spacing: -2px;
+        padding: 0 20px;
+    }
+
+    #page1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 20vh;
+        margin-top: 8vw;
+    }
+    #video-container{
+        height: 25vh;
+        width: 100%;
+        padding: 5px 10px;
+    }
+    #video-container #play{
+        padding: 12vw 10vw;
+        color: white;
+        top: 50%;
+        left: 50%;
+        font-size: 5.5vw;
+        text-transform: uppercase;
+        font-family: futura;
+        position: absolute;
+        border-radius: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    #page2{
+        min-height: 70vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5vw 3vw;
+    }
+
+    #page2 .elem{
+        height: 70vh;
+        width: 100%;
+        margin-bottom: 3vw;
+    }
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #page2 .elem .dets{
+        height: 40px;
+        width: 80%;
+        position: absolute;
+        z-index: 999;
+        /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+        background-color: palegoldenrod;
+        border-radius: 50px;
+    }
+    #page3 #content{
+        width: 100%;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+
+    #page3 #content #left{
+        font-family: futura;
+        font-size: 1.7vw;
+        line-height: 15px;
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    #page3 #content #right{
+        width: 90%;
+        font-size: 15px;
+     }
+     #page3 #content #right #para2{
+         margin-top: 20px;
+         margin-bottom: 30px;
+     }
+     #page3 #content #right a{
+         /* margin-top:40px ; */
+         text-decoration: none;
+         color: #333;
+     }
+     #page3 #content #right a:hover{
+         text-decoration: underline;
+     }
+     .child{
+        height: 50vh;
+        width: 100vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .child img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    #page4{
+        margin-top: 60px;
+        margin-bottom: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #page4 h1{
+        font-family: futura;
+        font-size: 4vw;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        width: 80%;
+        text-align: center;
+    }
+    #page4 button{
+        width: 300px;
+        height: 60px;
+        background-color: black;
+        color: white;
+        font-size: 12px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        margin-top: 40px;
+    }
+    #page4 button:hover{
+        color: #898888;
+    }
+    #page4 p{
+        font-size: 20px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    #page5{
+        min-height: 80%;
+        padding: 3vw 2vw;
+    }
+    #page5 #personal{
+        width: 100% ;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content:  space-around;
+        flex-direction: column;
+    }
+    #page5 #personal .pers{
+       
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+         display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #page5 #personal .pers img{
+        object-fit: contain;
+    }
+    #page5 #personal #written{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #page5 #personal .pers h2{
+        font-family: futura ;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #page5 #personal .pers p{
+        font-size: 18px;
+        margin-bottom:30px;
+    }
+    #page5 #personal .pers h2 p{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+        align-items: flex-start;
+    }
+}
